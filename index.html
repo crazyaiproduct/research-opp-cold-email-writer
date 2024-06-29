@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cold Email Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 50px 0;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        h2 {
+            margin-top: 0;
+            text-align: center;
+            font-size: 24px;
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+        }
+        input[type="text"], input[type="file"], textarea, select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Information for Research Opportunity Cold Email</h2>
+        <form action="/submit" method="post" enctype="multipart/form-data">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="current-roles">Current Roles (i.e. student & school? job & company?):</label>
+            <input type="text" id="current-roles" name="current-roles" required>
+
+            <!-- <label for="current-org">Company or School of Current Roles:</label>
+            <input type="text" id="current-org" name="current-org" required> -->
+
+            <label for="education">Education Experience (i.e. degree, school/university):</label>
+            <input type="text" id="education" name="education" required>
+
+            <!-- <label for="school">School or University Attended/Attending:</label>
+            <input type="text" id="school" name="school" required> -->
+
+            <label for="main_opp">Main Opportunity of Interest (such as RA, PhD, Master, Volunteer): </label>
+            <input type="text" id="main_opp" name="main_opp" required>
+
+            <label for="second_opp">Secondary Opportunity of Interest (such as RA, PhD, Master, Volunteer): </label>
+            <input type="text" id="second_opp" name="second_opp" required>
+
+            <label for="second_opp">Semester to Start (such as "Fall 2025"): </label>
+            <input type="text" id="second_opp" name="second_opp" required>
+
+            <label for="professor">Professor of Interest:</label>
+            <input type="text" id="professor" name="professor" required>
+
+            <label for="research-domain">Research Domain of Interest:</label>
+            <input type="text" id="research-domain" name="research-domain" required>
+
+            <label for="skills">Technical Skills Relevant to this Opportunity:</label>
+            <textarea id="skills" name="skills" required></textarea>
+
+            <label for="strength">Personal Strength (i.e. personality, soft skills):</label>
+            <textarea id="strength" name="strength" required></textarea>
+
+            <label for="experience">Relevant Professional Experience:</label>
+            <textarea id="experience" name="experience" required></textarea>
+
+            <label for="goal">Future Professional Goal or Resolution:</label>
+            <textarea id="goal" name="goal" required></textarea>
+
+
+            <!-- <label for="resume">Resume or CV:</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required> -->
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
