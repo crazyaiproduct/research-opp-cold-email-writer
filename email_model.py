@@ -163,6 +163,7 @@ class EmailModel():
         start = time.time()
         response = requests.request("POST", self.url, headers=self.headers, data=payload)
         json_response = json.loads(response.text)
-        print(json_response["choices"][0]["message"]["content"])
         end = time.time()
         print("Backend Response Time (s): ", end - start)
+        return json_response["choices"][0]["message"]["content"]
+        

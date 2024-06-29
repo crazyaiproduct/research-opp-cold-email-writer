@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
+from email_model import EmailModel
 
 app = Flask(__name__)
 
@@ -8,6 +9,7 @@ def index():
 
 @app.route('/submit', methods=['POST'])
 def submit():
+    em = EmailModel()
     # if request.method == 'POST':
     input_dict = dict()
     input_dict['Professor_Name'] = request.form['professor'],
@@ -27,8 +29,10 @@ def submit():
     input_dict['Interest_Paper_URL'] = request.form['professor'],
     input_dict['Paper_Abstract_CP'] = request.form['professor'],
     input_dict['Documents'] = request.form['professor']
-    # Simple feedback response based on input
-    response_message = f"Thank you, {name}! We've received your feedback."
+
+    # Get the email
+    payload = em.process_input(input_dict=input_dict)
+    response_message = em.call_llm(payload=payload)
     return render_template('feedback.html', response_message=response_message)
 
 if __name__ == '__main__':
