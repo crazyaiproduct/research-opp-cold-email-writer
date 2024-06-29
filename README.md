@@ -2,7 +2,7 @@
 
 ### An AI agent to help you write cold emails for research opportunities!
 
-In order to run this program, you need to clone this into your local path.
+In order to run this program, you need to clone the whole repo into your local path.
 
 Demo of how to run this program is as below:
 
