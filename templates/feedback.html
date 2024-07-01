@@ -4,9 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email Generated</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .return-link {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .return-link:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>Email Generated</h1>
+    <p>{{ response_message|safe }}</p>
+    <a class="return-link" href="{{ url_for('index') }}">Return to the Input Form</a>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Generated</title>
 </head>
 <body>
     <h1>{{ response_message|safe }}</h1>
-    <a href="{{ url_for('index') }}">Go back to the Input Form</a>
+    <a href="{{ url_for('index') }}">Return to the Input Form</a>
 </body>
 </html>
+ -->
